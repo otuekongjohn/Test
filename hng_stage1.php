@@ -1,6 +1,6 @@
 // An exceedingly Simple PHP script
 <?php 
-  echo "Good day. Thanks for the opportunity. God be praised!";
+  echo "Good day. Thanks for the opportunity.<br>God be praised!";
 ?>
 
 // Script to display mysql content using PHP
