@@ -8,7 +8,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "jokesdb";
+$dbname = "hngdb";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -17,13 +17,13 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "SELECT * FROM jokers";
+$sql = "SELECT * FROM intern_details";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    // output data (joke) of each row
+    // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "id: " . $row["id"]. " - Joke: " . $row["joketext"]. " - Date: " . $row["jokedate"]. "<br>";
+        echo "id: " . $row["id"]. " - Names: " . $row["Full Name"]. " - Github: " . $row["@github"]. " - Slack: " . $row["@slack"]. "<br>";
     }
 } else {
     echo "0 results";

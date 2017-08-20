@@ -1,3 +1,3 @@
 # Test
 
-First commit
+Stage 1 is done here.
